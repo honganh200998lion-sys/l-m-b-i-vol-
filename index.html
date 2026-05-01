@@ -1,283 +1,217 @@
  <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Practice Test 6</title>
+    <title>IELTS Listening - Test 6 Practice</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f9;
-        }
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        .section {
-            margin-bottom: 40px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .instructions {
-            font-style: italic;
-            color: #c0392b;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        .question-block {
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            border: none;
-            border-bottom: 1px solid #333;
-            padding: 2px 5px;
-            width: 150px;
-            outline: none;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        .map-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .map-placeholder {
-            background: #ffeaa7;
-            padding: 20px;
-            border: 2px dashed #fab1a0;
-            margin-bottom: 10px;
-        }
-        .options-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .options-list li {
-            margin-bottom: 5px;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
+        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .section { margin-bottom: 40px; padding: 15px; border: 1px solid #eee; border-radius: 8px; }
+        
+        /* Gap-filling style */
+        input[type="text"] { border: none; border-bottom: 2px solid #bdc3c7; padding: 2px 5px; font-size: 16px; transition: border-color 0.3s; width: 150px; }
+        input[type="text"]:focus { outline: none; border-bottom-color: #3498db; }
+        
+        /* Map style */
+        .map-container { text-align: center; margin: 20px 0; }
+        .map-image { max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #3498db; color: white; }
+
+        /* Drag and Drop style */
+        .drag-section { display: flex; gap: 20px; margin-top: 20px; }
+        .options-container { flex: 1; background: #ecf0f1; padding: 15px; border-radius: 8px; min-height: 100px; }
+        .drop-zone-container { flex: 2; }
+        .draggable { background: #3498db; color: white; padding: 8px 12px; margin: 5px; border-radius: 4px; cursor: move; display: inline-block; font-size: 14px; }
+        .drop-target { border: 2px dashed #bdc3c7; min-height: 35px; padding: 5px; margin: 5px 0; border-radius: 4px; background: #fff; }
+        
+        /* Button & Result */
+        .btn-check { background: #27ae60; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-size: 18px; display: block; margin: 30px auto; }
+        .btn-check:hover { background: #219150; }
+        #result { text-align: center; font-weight: bold; font-size: 20px; margin-top: 20px; }
+        .correct { background-color: #d4edda !important; color: #155724; }
+        .incorrect { background-color: #f8d7da !important; color: #721c24; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>IELTS LISTENING PRACTICE TEST 6</h1>
+    <h1>IELTS Practice - Test 6</h1>
 
     <div class="section">
-        <h2>SECTION 1</h2>
-        <p class="instructions">Questions 1-10: Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.</p>
-        
-        <h3>The London Relocation Services</h3>
+        <h2>Section 1: Customer Details</h2>
+        <p>Customer address: 118 <input type="text" id="q1"> Park, Ballysillan</p>
+        <p>Phone no: <input type="text" id="q2"> (mobile)</p>
+        <p>Anna is hoping to find work as a <input type="text" id="q3"></p>
+        <p>She needs to find a <input type="text" id="q4"> school for her son.</p>
+        <p>Preferred location: in the <input type="text" id="q5"> of the city.</p>
+        <p>Husband wants to be near a <input type="text" id="q6"></p>
+        <p>Son prefers to be close to a <input type="text" id="q7"></p>
+        <p>Property type: live in a <input type="text" id="q8"></p>
+        <p>Preferred number of bedrooms: <input type="text" id="q9"></p>
+        <p>A small <input type="text" id="q10"> is also desirable.</p>
+    </div>
+
+    <div class="section">
+        <h2>Section 2: Hollies Supermarket</h2>
+        <p>11. The supervisor says employees have to: 
+            <select id="q11">
+                <option value="">--Choose--</option>
+                <option value="A">A. Teamwork</option>
+                <option value="B">B. Be flexible</option>
+                <option value="C">C. Lifting heavy loads</option>
+            </select>
+        </p>
+        <p>12. When busy, employees must: <select id="q12"><option value="">--Choose--</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></p>
+        <p>13. Positive attitude: <select id="q13"><option value="">--Choose--</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></p>
+        <p>14. Stay calm when customer: <select id="q14"><option value="">--Choose--</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></p>
+
+        <h3>Label the plan</h3>
+        <div class="map-container">
+            <img src="https://i.imgur.com/G4YxM9H.jpeg" alt="Hollies Supermarket Map" class="map-image">
+        </div>
         <table>
             <tr>
-                <th colspan="2">Customer's personal details</th>
+                <th>Location</th>
+                <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th>
             </tr>
-            <tr>
-                <td>Customer Name:</td>
-                <td>Anna Woods</td>
-            </tr>
-            <tr>
-                <td>Customer Address:</td>
-                <td>118 <strong>1.</strong> <input type="text"> Park, Ballysillan</td>
-            </tr>
-            <tr>
-                <td>Postcode:</td>
-                <td>BT14 9BJ</td>
-            </tr>
-            <tr>
-                <td>Phone No (Mobile):</td>
-                <td><strong>2.</strong> <input type="text"></td>
-            </tr>
-            <tr>
-                <th colspan="2">Other information</th>
-            </tr>
-            <tr>
-                <td>Work goal:</td>
-                <td>Anna is hoping to find work as a <strong>3.</strong> <input type="text"></td>
-            </tr>
-            <tr>
-                <td>Schooling:</td>
-                <td>She needs to find a <strong>4.</strong> <input type="text"> school for her son.</td>
-            </tr>
-            <tr>
-                <th colspan="2">Requirements for the new property</th>
-            </tr>
-            <tr>
-                <td>Location (Preferred):</td>
-                <td>In the <strong>5.</strong> <input type="text"> of the city.</td>
-            </tr>
-            <tr>
-                <td>Husband's preference:</td>
-                <td>Near a <strong>6.</strong> <input type="text"></td>
-            </tr>
-            <tr>
-                <td>Son's preference:</td>
-                <td>Close to a <strong>7.</strong> <input type="text"></td>
-            </tr>
-            <tr>
-                <td>Property Details:</td>
-                <td>Would like to live in a <strong>8.</strong> <input type="text"></td>
-            </tr>
-            <tr>
-                <td>Bedrooms:</td>
-                <td>Prefer <strong>9.</strong> <input type="text"> bedrooms.</td>
-            </tr>
-            <tr>
-                <td>Additional feature:</td>
-                <td>A small <strong>10.</strong> <input type="text"> is also desirable.</td>
-            </tr>
+            <tr><td>15. Staff entrance</td><td><input type="radio" name="m15" value="A"></td><td><input type="radio" name="m15" value="B"></td><td><input type="radio" name="m15" value="C"></td><td><input type="radio" name="m15" value="D"></td><td><input type="radio" name="m15" value="E"></td><td><input type="radio" name="m15" value="F"></td><td><input type="radio" name="m15" value="G"></td><td><input type="radio" name="m15" value="H"></td><td><input type="radio" name="m15" value="I"></td><td><input type="radio" name="m15" value="J"></td></tr>
+            <tr><td>16. Manager's office</td><td><input type="radio" name="m16" value="A"></td><td><input type="radio" name="m16" value="B"></td><td><input type="radio" name="m16" value="C"></td><td><input type="radio" name="m16" value="D"></td><td><input type="radio" name="m16" value="E"></td><td><input type="radio" name="m16" value="F"></td><td><input type="radio" name="m16" value="G"></td><td><input type="radio" name="m16" value="H"></td><td><input type="radio" name="m16" value="I"></td><td><input type="radio" name="m16" value="J"></td></tr>
+            <tr><td>17. Storage and unpacking</td><td><input type="radio" name="m17" value="A"></td><td><input type="radio" name="m17" value="B"></td><td><input type="radio" name="m17" value="C"></td><td><input type="radio" name="m17" value="D"></td><td><input type="radio" name="m17" value="E"></td><td><input type="radio" name="m17" value="F"></td><td><input type="radio" name="m17" value="G"></td><td><input type="radio" name="m17" value="H"></td><td><input type="radio" name="m17" value="I"></td><td><input type="radio" name="m17" value="J"></td></tr>
+            <tr><td>18. Kitchen</td><td><input type="radio" name="m18" value="A"></td><td><input type="radio" name="m18" value="B"></td><td><input type="radio" name="m18" value="C"></td><td><input type="radio" name="m18" value="D"></td><td><input type="radio" name="m18" value="E"></td><td><input type="radio" name="m18" value="F"></td><td><input type="radio" name="m18" value="G"></td><td><input type="radio" name="m18" value="H"></td><td><input type="radio" name="m18" value="I"></td><td><input type="radio" name="m18" value="J"></td></tr>
+            <tr><td>19. Cleaning equipment</td><td><input type="radio" name="m19" value="A"></td><td><input type="radio" name="m19" value="B"></td><td><input type="radio" name="m19" value="C"></td><td><input type="radio" name="m19" value="D"></td><td><input type="radio" name="m19" value="E"></td><td><input type="radio" name="m19" value="F"></td><td><input type="radio" name="m19" value="G"></td><td><input type="radio" name="m19" value="H"></td><td><input type="radio" name="m19" value="I"></td><td><input type="radio" name="m19" value="J"></td></tr>
+            <tr><td>20. Staff relaxation area</td><td><input type="radio" name="m20" value="A"></td><td><input type="radio" name="m20" value="B"></td><td><input type="radio" name="m20" value="C"></td><td><input type="radio" name="m20" value="D"></td><td><input type="radio" name="m20" value="E"></td><td><input type="radio" name="m20" value="F"></td><td><input type="radio" name="m20" value="G"></td><td><input type="radio" name="m20" value="H"></td><td><input type="radio" name="m20" value="I"></td><td><input type="radio" name="m20" value="J"></td></tr>
         </table>
     </div>
 
     <div class="section">
-        <h2>SECTION 2</h2>
-        <p class="instructions">Questions 11-14: Choose the correct answer A, B, or C.</p>
-        <h3>Starting work at Hollies supermarket</h3>
-        
-        <div class="question-block">
-            <p><strong>11. The supervisor starts her talk by explaining that employees have to:</strong></p>
-            <input type="radio" name="q11" value="A"> A. be aware of the importance of teamwork.<br>
-            <input type="radio" name="q11" value="B"> B. be flexible in terms of their availability.<br>
-            <input type="radio" name="q11" value="C"> C. be capable of lifting heavy loads.
-        </div>
-
-        <div class="question-block">
-            <p><strong>12. The supervisor says that when the supermarket is very busy, employees must:</strong></p>
-            <input type="radio" name="q12" value="A"> A. decide for themselves what needs doing.<br>
-            <input type="radio" name="q12" value="B"> B. postpone their scheduled break.<br>
-            <input type="radio" name="q12" value="C"> C. report minor accidents quickly.
-        </div>
-
-        <div class="question-block">
-            <p><strong>13. The supervisor explains that when employees have a positive attitude, it:</strong></p>
-            <input type="radio" name="q13" value="A"> A. helps everyone in the supermarket to relax.<br>
-            <input type="radio" name="q13" value="B"> B. encourages customers to spend more.<br>
-            <input type="radio" name="q13" value="C"> C. improves work effectiveness.
-        </div>
-
-        <div class="question-block">
-            <p><strong>14. The supervisor says it is essential to stay calm when a customer:</strong></p>
-            <input type="radio" name="q14" value="A"> A. reports an employee to the manager.<br>
-            <input type="radio" name="q14" value="B"> B. delays other shoppers.<br>
-            <input type="radio" name="q14" value="C"> C. refuses to wait their turn.
-        </div>
-
-        <hr>
-        <p class="instructions">Questions 15-20: Label the plan below. Choose the correct letter, A-J.</p>
-        <h3>Hollies Supermarket Plan</h3>
-        <div class="map-container">
-            <div class="map-placeholder">
-                [Sơ đồ Hollies Supermarket với các vị trí A-J]
+        <h2>Section 3: Picture Books</h2>
+        <div class="drag-section">
+            <div class="options-container" id="options">
+                <div class="draggable" draggable="true" id="optA">A. Changing times</div>
+                <div class="draggable" draggable="true" id="optC">C. Uncommon plot</div>
+                <div class="draggable" draggable="true" id="optD">D. Song-like text</div>
+                <div class="draggable" draggable="true" id="optE">E. Famous illustrator</div>
+                <div class="draggable" draggable="true" id="optF">F. Surprise ending</div>
+                <div class="draggable" draggable="true" id="optI">I. Well-known characters</div>
+            </div>
+            <div class="drop-zone-container">
+                <p>21. Spy Friends: <div class="drop-target" id="q21" data-ans="I"></div></p>
+                <p>22. Goodnight Little Rabbit: <div class="drop-target" id="q22" data-ans="A"></div></p>
+                <p>23. The Boat Party: <div class="drop-target" id="q23" data-ans="E"></div></p>
+                <p>24. Puppy and Friends: <div class="drop-target" id="q24" data-ans="F"></div></p>
+                <p>25. Hats and Socks: <div class="drop-target" id="q25" data-ans="C"></div></p>
+                <p>26. A Family Adventure: <div class="drop-target" id="q26" data-ans="D"></div></p>
             </div>
         </div>
-        <p>15. Staff entrance: <input type="text" style="width: 50px;"></p>
-        <p>16. Manager's office: <input type="text" style="width: 50px;"></p>
-        <p>17. Storage and unpacking: <input type="text" style="width: 50px;"></p>
-        <p>18. Kitchen: <input type="text" style="width: 50px;"></p>
-        <p>19. Cleaning equipment: <input type="text" style="width: 50px;"></p>
-        <p>20. Staff relaxation area: <input type="text" style="width: 50px;"></p>
+        <p>27-28. Surprising points: 
+            <input type="checkbox" name="q27" value="A"> A
+            <input type="checkbox" name="q27" value="B"> B
+            <input type="checkbox" name="q27" value="C"> C
+            <input type="checkbox" name="q27" value="D"> D
+        </p>
+        <p>29-30. Aspects to talk: 
+            <input type="checkbox" name="q29" value="A"> A
+            <input type="checkbox" name="q29" value="B"> B
+            <input type="checkbox" name="q29" value="C"> C
+            <input type="checkbox" name="q29" value="D"> D
+        </p>
     </div>
 
     <div class="section">
-        <h2>SECTION 3</h2>
-        <p class="instructions">Questions 21-26: What reason do teachers give for using each of the following picture books? Choose SIX correct answers from A-I.</p>
-        
-        <div style="display: flex; gap: 20px;">
-            <div style="flex: 1;">
-                <strong>Books:</strong>
-                <p>21. Spy Friends: <input type="text" style="width: 40px;"></p>
-                <p>22. Goodnight Little Rabbit: <input type="text" style="width: 40px;"></p>
-                <p>23. The Boat Party: <input type="text" style="width: 40px;"></p>
-                <p>24. Puppy and Friends: <input type="text" style="width: 40px;"></p>
-                <p>25. Hats and Socks: <input type="text" style="width: 40px;"></p>
-                <p>26. A Family Adventure: <input type="text" style="width: 40px;"></p>
-            </div>
-            <div style="flex: 1; background: #eee; padding: 10px;">
-                <strong>Reasons:</strong>
-                <ul class="options-list">
-                    <li>A. Pictures show changing times of day.</li>
-                    <li>B. Words are fun to say out loud.</li>
-                    <li>C. Uncommon plot structure.</li>
-                    <li>D. Text can be turned into song.</li>
-                    <li>E. Pictures by a famous illustrator.</li>
-                    <li>F. Surprise at the end.</li>
-                    <li>G. Simple line drawings.</li>
-                    <li>H. Published recently.</li>
-                    <li>I. Features well-known characters.</li>
-                </ul>
-            </div>
-        </div>
-
-        <p class="instructions">Questions 27-30: Choose TWO correct answers for each block.</p>
-        <p><strong>27-28. Which TWO points from Smith's article did both speakers find surprising?</strong></p>
-        <input type="checkbox"> A. standard length / how recent the genre is<br>
-        <input type="checkbox"> B. argument that they are not literature<br>
-        <input type="checkbox"> C. lack of research about this age group<br>
-        <input type="checkbox"> D. popularity of books from overseas<br>
-        <input type="checkbox"> E. variety of versions
-
-        <p><strong>29-30. Which TWO aspects of picture books do the speakers agree to talk about?</strong></p>
-        <input type="checkbox"> A. material they are made from<br>
-        <input type="checkbox"> B. common characters in them<br>
-        <input type="checkbox"> C. variety of roles / cultural elements<br>
-        <input type="checkbox"> D. cultural elements in them<br>
-        <input type="checkbox"> E. future of the genre
+        <h2>Section 4: Field Trip Notes</h2>
+        <p>31. Everyone must stop for <input type="text" id="q31"></p>
+        <p>32. There are <input type="text" id="q32"> on the highway.</p>
+        <p>33. Researching the region's <input type="text" id="q33"></p>
+        <p>34. Effect of <input type="text" id="q34"> on the land.</p>
+        <p>35. Variations in the <input type="text" id="q35"></p>
+        <p>36. Car <input type="text" id="q36"> are expensive.</p>
+        <p>37. Not many types of <input type="text" id="q37"></p>
+        <p>38. Muskeg has hidden <input type="text" id="q38"></p>
+        <p>39. Photos for future <input type="text" id="q39"></p>
+        <p>40. Samples checked for <input type="text" id="q40"></p>
     </div>
 
-    <div class="section">
-        <h2>SECTION 4</h2>
-        <p class="instructions">Questions 31-40: Complete the notes below. Write ONE WORD ONLY for each answer.</p>
-        <h3>Geography - 331 Field Trip: The James Bay Road</h3>
-        
-        <ul>
-            <li>At the starting point, everyone must stop for <strong>31.</strong> <input type="text"></li>
-            <li>For safety reasons, there are <strong>32.</strong> <input type="text"> on the highway.</li>
-        </ul>
-
-        <h4>Radisson Research Centre</h4>
-        <ul>
-            <li>Works with other institutes to research the region's <strong>33.</strong> <input type="text"></li>
-            <li>Lectures will discuss the effect of <strong>34.</strong> <input type="text"> on the land.</li>
-            <li>Outpost stations gather research related to variations in the <strong>35.</strong> <input type="text"></li>
-        </ul>
-
-        <h4>The Trans-Taiga Road</h4>
-        <ul>
-            <li>The road is unpaved.</li>
-            <li>Breakdowns are serious as car <strong>36.</strong> <input type="text"> are expensive.</li>
-            <li>Impact of rainfall and hydro production will be discussed.</li>
-        </ul>
-
-        <h4>The Taiga</h4>
-        <ul>
-            <li>Not many types of <strong>37.</strong> <input type="text">, but plenty of wildlife.</li>
-            <li>Muskeg area is dangerous due to hidden <strong>38.</strong> <input type="text"></li>
-            <li>Photos of birds should be taken for future <strong>39.</strong> <input type="text"></li>
-            <li>Water samples will be checked for <strong>40.</strong> <input type="text"></li>
-        </ul>
-    </div>
-
+    <button class="btn-check" onclick="checkAnswers()">Check My Answers</button>
+    <div id="result"></div>
 </div>
+
+<script>
+    // Drag and Drop Logic
+    const draggables = document.querySelectorAll('.draggable');
+    const dropTargets = document.querySelectorAll('.drop-target');
+
+    draggables.forEach(draggable => {
+        draggable.addEventListener('dragstart', () => draggable.classList.add('dragging'));
+        draggable.addEventListener('dragend', () => draggable.classList.remove('dragging'));
+    });
+
+    dropTargets.forEach(target => {
+        target.addEventListener('dragover', e => e.preventDefault());
+        target.addEventListener('drop', e => {
+            const draggable = document.querySelector('.dragging');
+            if (target.children.length === 0) {
+                target.appendChild(draggable.cloneNode(true));
+            }
+        });
+    });
+
+    // Main Checking Function
+    function checkAnswers() {
+        let score = 0;
+        const answers = {
+            q1: "fordyce", q2: "07840051963", q3: "nurse", q4: "primary", q5: "south",
+            q6: "station", q7: "park", q8: "house", q9: ["3", "three"], q10: "office",
+            q11: "B", q12: "A", q13: "C", q14: "B",
+            m15: "A", m16: "D", m17: "B", m18: "E", m19: "G", m20: "C",
+            q31: "registration", q32: "telephones", q33: "ecology", q34: "insects", 
+            q35: "climate", q36: "repairs", q37: "plant", q38: "pools", 
+            q39: "documentation", q40: "pollution"
+        };
+
+        // Check Text & Select
+        for (let key in answers) {
+            let input = document.getElementById(key);
+            if (!input) {
+                // Radio buttons (Map)
+                let radios = document.getElementsByName(key);
+                if (radios.length > 0) {
+                    let checked = Array.from(radios).find(r => r.checked);
+                    if (checked && checked.value === answers[key]) score++;
+                }
+                continue;
+            }
+            
+            let val = input.value.trim().toLowerCase();
+            if (Array.isArray(answers[key])) {
+                if (answers[key].includes(val)) { score++; input.classList.add('correct'); }
+                else input.classList.add('incorrect');
+            } else {
+                if (val === answers[key].toLowerCase()) { score++; input.classList.add('correct'); }
+                else input.classList.add('incorrect');
+            }
+        }
+
+        // Check Drag & Drop
+        dropTargets.forEach(target => {
+            if (target.firstChild && target.firstChild.innerText.startsWith(target.dataset.ans)) {
+                score++;
+                target.classList.add('correct');
+            } else target.classList.add('incorrect');
+        });
+
+        // Check Multiple Selection (27-30)
+        if (document.querySelector('input[name="q27"][value="A"]').checked && 
+            document.querySelector('input[name="q27"][value="B"]').checked) score += 2;
+        if (document.querySelector('input[name="q29"][value="A"]').checked && 
+            document.querySelector('input[name="q29"][value="D"]').checked) score += 2;
+
+        document.getElementById('result').innerText = `Your Score: ${score}/40`;
+    }
+</script>
 
 </body>
 </html>
