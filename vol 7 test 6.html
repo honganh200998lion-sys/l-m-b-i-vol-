@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>IELTS Master Web</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f2f4f8}header{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#1f2937;color:#fff}.wrap{display:grid;grid-template-columns:1.2fr 1fr;height:calc(100vh - 56px)}.left,.right{padding:18px;overflow:auto}.left{background:#fff;border-right:1px solid #ddd}.right{background:#fafafa}.card{background:#fff;border:1px solid #ddd;border-radius:12px;padding:14px;margin-bottom:14px}.qtitle{font-weight:700;margin-bottom:8px}.option{display:block;padding:6px 0}.drop{border:2px dashed #aaa;padding:8px;border-radius:8px;min-height:36px;margin-top:6px}.drag{display:inline-block;padding:6px 10px;background:#e5e7eb;border-radius:8px;margin:4px;cursor:grab}.blank{width:140px;padding:8px}.mapbtn{display:inline-block;padding:8px 10px;border:1px solid #999;border-radius:8px;margin:4px;cursor:pointer}.active{background:#dbeafe}.btn{padding:10px 14px;border:none;border-radius:10px;background:#2563eb;color:#fff;cursor:pointer}.score{font-size:18px;font-weight:700}
+</style>
+</head>
+<body>
+<header><div>IELTS MASTER WEB</div><div id='timer'>30:00</div></header>
+<div class='wrap'>
+<div class='left'>
+<h2>Section Material</h2>
+<div class='card'><p><b>Transcript / Passage / Map Area</b></p><p>Put reading passage, listening transcript, image map, or PDF screenshot here.</p><p><b>Map Labels:</b> A Entrance | B Office | C Kitchen | D Storage</p></div>
+</div>
+<div class='right'>
+<div class='card'>
+<div class='qtitle'>1. Multiple Choice</div>
+<label class='option'><input type='radio' name='q1' value='A'> A</label>
+<label class='option'><input type='radio' name='q1' value='B'> B</label>
+<label class='option'><input type='radio' name='q1' value='C'> C</label>
+</div>
+<div class='card'>
+<div class='qtitle'>2. Fill in the blank</div>
+<input class='blank' id='q2' placeholder='Type answer'>
+</div>
+<div class='card'>
+<div class='qtitle'>3. Drag & Drop Matching</div>
+<div>
+<span class='drag' draggable='true' data-val='A'>A</span>
+<span class='drag' draggable='true' data-val='B'>B</span>
+<span class='drag' draggable='true' data-val='C'>C</span>
+</div>
+<div class='drop' data-target='q3'>Drop answer here</div>
+</div>
+<div class='card'>
+<div class='qtitle'>4. Map Labeling</div>
+<div id='mapq'>
+<span class='mapbtn'>A</span><span class='mapbtn'>B</span><span class='mapbtn'>C</span><span class='mapbtn'>D</span>
+</div>
+</div>
+<div class='card'><button class='btn' onclick='checkAnswers()'>Check Answers</button> <span class='score' id='score'></span></div>
+</div>
+</div>
+<script>
+let sec=1800;setInterval(()=>{sec--;let m=Math.floor(sec/60),s=sec%60;timer.textContent=`${m}:${String(s).padStart(2,'0')}`},1000);
+let dragVal='';document.querySelectorAll('.drag').forEach(el=>{el.addEventListener('dragstart',e=>dragVal=el.dataset.val)});document.querySelector('.drop').addEventListener('dragover',e=>e.preventDefault());document.querySelector('.drop').addEventListener('drop',e=>{e.preventDefault();e.target.textContent=dragVal;e.target.dataset.answer=dragVal});
+let mapAns='';document.querySelectorAll('.mapbtn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.mapbtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');mapAns=b.textContent;});
+function checkAnswers(){let score=0;if(document.querySelector('input[name=q1]:checked')?.value==='B')score++;if(q2.value.trim().toLowerCase()==='teacher')score++;if(document.querySelector('.drop').dataset.answer==='C')score++;if(mapAns==='A')score++;document.getElementById('score').textContent='Score: '+score+'/4';}
+</script>
+</body>
+</html>
