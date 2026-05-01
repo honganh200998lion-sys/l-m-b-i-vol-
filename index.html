@@ -1,54 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>IELTS Master Web</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f2f4f8}header{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#1f2937;color:#fff}.wrap{display:grid;grid-template-columns:1.2fr 1fr;height:calc(100vh - 56px)}.left,.right{padding:18px;overflow:auto}.left{background:#fff;border-right:1px solid #ddd}.right{background:#fafafa}.card{background:#fff;border:1px solid #ddd;border-radius:12px;padding:14px;margin-bottom:14px}.qtitle{font-weight:700;margin-bottom:8px}.option{display:block;padding:6px 0}.drop{border:2px dashed #aaa;padding:8px;border-radius:8px;min-height:36px;margin-top:6px}.drag{display:inline-block;padding:6px 10px;background:#e5e7eb;border-radius:8px;margin:4px;cursor:grab}.blank{width:140px;padding:8px}.mapbtn{display:inline-block;padding:8px 10px;border:1px solid #999;border-radius:8px;margin:4px;cursor:pointer}.active{background:#dbeafe}.btn{padding:10px 14px;border:none;border-radius:10px;background:#2563eb;color:#fff;cursor:pointer}.score{font-size:18px;font-weight:700}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Practice Test 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .instructions {
+            font-style: italic;
+            color: #c0392b;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .question-block {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            border: none;
+            border-bottom: 1px solid #333;
+            padding: 2px 5px;
+            width: 150px;
+            outline: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .map-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .map-placeholder {
+            background: #ffeaa7;
+            padding: 20px;
+            border: 2px dashed #fab1a0;
+            margin-bottom: 10px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .options-list li {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-<header><div>IELTS MASTER WEB</div><div id='timer'>30:00</div></header>
-<div class='wrap'>
-<div class='left'>
-<h2>Section Material</h2>
-<div class='card'><p><b>Transcript / Passage / Map Area</b></p><p>Put reading passage, listening transcript, image map, or PDF screenshot here.</p><p><b>Map Labels:</b> A Entrance | B Office | C Kitchen | D Storage</p></div>
+
+<div class="container">
+    <h1>IELTS LISTENING PRACTICE TEST 6</h1>
+
+    <div class="section">
+        <h2>SECTION 1</h2>
+        <p class="instructions">Questions 1-10: Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.</p>
+        
+        <h3>The London Relocation Services</h3>
+        <table>
+            <tr>
+                <th colspan="2">Customer's personal details</th>
+            </tr>
+            <tr>
+                <td>Customer Name:</td>
+                <td>Anna Woods</td>
+            </tr>
+            <tr>
+                <td>Customer Address:</td>
+                <td>118 <strong>1.</strong> <input type="text"> Park, Ballysillan</td>
+            </tr>
+            <tr>
+                <td>Postcode:</td>
+                <td>BT14 9BJ</td>
+            </tr>
+            <tr>
+                <td>Phone No (Mobile):</td>
+                <td><strong>2.</strong> <input type="text"></td>
+            </tr>
+            <tr>
+                <th colspan="2">Other information</th>
+            </tr>
+            <tr>
+                <td>Work goal:</td>
+                <td>Anna is hoping to find work as a <strong>3.</strong> <input type="text"></td>
+            </tr>
+            <tr>
+                <td>Schooling:</td>
+                <td>She needs to find a <strong>4.</strong> <input type="text"> school for her son.</td>
+            </tr>
+            <tr>
+                <th colspan="2">Requirements for the new property</th>
+            </tr>
+            <tr>
+                <td>Location (Preferred):</td>
+                <td>In the <strong>5.</strong> <input type="text"> of the city.</td>
+            </tr>
+            <tr>
+                <td>Husband's preference:</td>
+                <td>Near a <strong>6.</strong> <input type="text"></td>
+            </tr>
+            <tr>
+                <td>Son's preference:</td>
+                <td>Close to a <strong>7.</strong> <input type="text"></td>
+            </tr>
+            <tr>
+                <td>Property Details:</td>
+                <td>Would like to live in a <strong>8.</strong> <input type="text"></td>
+            </tr>
+            <tr>
+                <td>Bedrooms:</td>
+                <td>Prefer <strong>9.</strong> <input type="text"> bedrooms.</td>
+            </tr>
+            <tr>
+                <td>Additional feature:</td>
+                <td>A small <strong>10.</strong> <input type="text"> is also desirable.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>SECTION 2</h2>
+        <p class="instructions">Questions 11-14: Choose the correct answer A, B, or C.</p>
+        <h3>Starting work at Hollies supermarket</h3>
+        
+        <div class="question-block">
+            <p><strong>11. The supervisor starts her talk by explaining that employees have to:</strong></p>
+            <input type="radio" name="q11" value="A"> A. be aware of the importance of teamwork.<br>
+            <input type="radio" name="q11" value="B"> B. be flexible in terms of their availability.<br>
+            <input type="radio" name="q11" value="C"> C. be capable of lifting heavy loads.
+        </div>
+
+        <div class="question-block">
+            <p><strong>12. The supervisor says that when the supermarket is very busy, employees must:</strong></p>
+            <input type="radio" name="q12" value="A"> A. decide for themselves what needs doing.<br>
+            <input type="radio" name="q12" value="B"> B. postpone their scheduled break.<br>
+            <input type="radio" name="q12" value="C"> C. report minor accidents quickly.
+        </div>
+
+        <div class="question-block">
+            <p><strong>13. The supervisor explains that when employees have a positive attitude, it:</strong></p>
+            <input type="radio" name="q13" value="A"> A. helps everyone in the supermarket to relax.<br>
+            <input type="radio" name="q13" value="B"> B. encourages customers to spend more.<br>
+            <input type="radio" name="q13" value="C"> C. improves work effectiveness.
+        </div>
+
+        <div class="question-block">
+            <p><strong>14. The supervisor says it is essential to stay calm when a customer:</strong></p>
+            <input type="radio" name="q14" value="A"> A. reports an employee to the manager.<br>
+            <input type="radio" name="q14" value="B"> B. delays other shoppers.<br>
+            <input type="radio" name="q14" value="C"> C. refuses to wait their turn.
+        </div>
+
+        <hr>
+        <p class="instructions">Questions 15-20: Label the plan below. Choose the correct letter, A-J.</p>
+        <h3>Hollies Supermarket Plan</h3>
+        <div class="map-container">
+            <div class="map-placeholder">
+                [Sơ đồ Hollies Supermarket với các vị trí A-J]
+            </div>
+        </div>
+        <p>15. Staff entrance: <input type="text" style="width: 50px;"></p>
+        <p>16. Manager's office: <input type="text" style="width: 50px;"></p>
+        <p>17. Storage and unpacking: <input type="text" style="width: 50px;"></p>
+        <p>18. Kitchen: <input type="text" style="width: 50px;"></p>
+        <p>19. Cleaning equipment: <input type="text" style="width: 50px;"></p>
+        <p>20. Staff relaxation area: <input type="text" style="width: 50px;"></p>
+    </div>
+
+    <div class="section">
+        <h2>SECTION 3</h2>
+        <p class="instructions">Questions 21-26: What reason do teachers give for using each of the following picture books? Choose SIX correct answers from A-I.</p>
+        
+        <div style="display: flex; gap: 20px;">
+            <div style="flex: 1;">
+                <strong>Books:</strong>
+                <p>21. Spy Friends: <input type="text" style="width: 40px;"></p>
+                <p>22. Goodnight Little Rabbit: <input type="text" style="width: 40px;"></p>
+                <p>23. The Boat Party: <input type="text" style="width: 40px;"></p>
+                <p>24. Puppy and Friends: <input type="text" style="width: 40px;"></p>
+                <p>25. Hats and Socks: <input type="text" style="width: 40px;"></p>
+                <p>26. A Family Adventure: <input type="text" style="width: 40px;"></p>
+            </div>
+            <div style="flex: 1; background: #eee; padding: 10px;">
+                <strong>Reasons:</strong>
+                <ul class="options-list">
+                    <li>A. Pictures show changing times of day.</li>
+                    <li>B. Words are fun to say out loud.</li>
+                    <li>C. Uncommon plot structure.</li>
+                    <li>D. Text can be turned into song.</li>
+                    <li>E. Pictures by a famous illustrator.</li>
+                    <li>F. Surprise at the end.</li>
+                    <li>G. Simple line drawings.</li>
+                    <li>H. Published recently.</li>
+                    <li>I. Features well-known characters.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="instructions">Questions 27-30: Choose TWO correct answers for each block.</p>
+        <p><strong>27-28. Which TWO points from Smith's article did both speakers find surprising?</strong></p>
+        <input type="checkbox"> A. standard length / how recent the genre is<br>
+        <input type="checkbox"> B. argument that they are not literature<br>
+        <input type="checkbox"> C. lack of research about this age group<br>
+        <input type="checkbox"> D. popularity of books from overseas<br>
+        <input type="checkbox"> E. variety of versions
+
+        <p><strong>29-30. Which TWO aspects of picture books do the speakers agree to talk about?</strong></p>
+        <input type="checkbox"> A. material they are made from<br>
+        <input type="checkbox"> B. common characters in them<br>
+        <input type="checkbox"> C. variety of roles / cultural elements<br>
+        <input type="checkbox"> D. cultural elements in them<br>
+        <input type="checkbox"> E. future of the genre
+    </div>
+
+    <div class="section">
+        <h2>SECTION 4</h2>
+        <p class="instructions">Questions 31-40: Complete the notes below. Write ONE WORD ONLY for each answer.</p>
+        <h3>Geography - 331 Field Trip: The James Bay Road</h3>
+        
+        <ul>
+            <li>At the starting point, everyone must stop for <strong>31.</strong> <input type="text"></li>
+            <li>For safety reasons, there are <strong>32.</strong> <input type="text"> on the highway.</li>
+        </ul>
+
+        <h4>Radisson Research Centre</h4>
+        <ul>
+            <li>Works with other institutes to research the region's <strong>33.</strong> <input type="text"></li>
+            <li>Lectures will discuss the effect of <strong>34.</strong> <input type="text"> on the land.</li>
+            <li>Outpost stations gather research related to variations in the <strong>35.</strong> <input type="text"></li>
+        </ul>
+
+        <h4>The Trans-Taiga Road</h4>
+        <ul>
+            <li>The road is unpaved.</li>
+            <li>Breakdowns are serious as car <strong>36.</strong> <input type="text"> are expensive.</li>
+            <li>Impact of rainfall and hydro production will be discussed.</li>
+        </ul>
+
+        <h4>The Taiga</h4>
+        <ul>
+            <li>Not many types of <strong>37.</strong> <input type="text">, but plenty of wildlife.</li>
+            <li>Muskeg area is dangerous due to hidden <strong>38.</strong> <input type="text"></li>
+            <li>Photos of birds should be taken for future <strong>39.</strong> <input type="text"></li>
+            <li>Water samples will be checked for <strong>40.</strong> <input type="text"></li>
+        </ul>
+    </div>
+
 </div>
-<div class='right'>
-<div class='card'>
-<div class='qtitle'>1. Multiple Choice</div>
-<label class='option'><input type='radio' name='q1' value='A'> A</label>
-<label class='option'><input type='radio' name='q1' value='B'> B</label>
-<label class='option'><input type='radio' name='q1' value='C'> C</label>
-</div>
-<div class='card'>
-<div class='qtitle'>2. Fill in the blank</div>
-<input class='blank' id='q2' placeholder='Type answer'>
-</div>
-<div class='card'>
-<div class='qtitle'>3. Drag & Drop Matching</div>
-<div>
-<span class='drag' draggable='true' data-val='A'>A</span>
-<span class='drag' draggable='true' data-val='B'>B</span>
-<span class='drag' draggable='true' data-val='C'>C</span>
-</div>
-<div class='drop' data-target='q3'>Drop answer here</div>
-</div>
-<div class='card'>
-<div class='qtitle'>4. Map Labeling</div>
-<div id='mapq'>
-<span class='mapbtn'>A</span><span class='mapbtn'>B</span><span class='mapbtn'>C</span><span class='mapbtn'>D</span>
-</div>
-</div>
-<div class='card'><button class='btn' onclick='checkAnswers()'>Check Answers</button> <span class='score' id='score'></span></div>
-</div>
-</div>
-<script>
-let sec=1800;setInterval(()=>{sec--;let m=Math.floor(sec/60),s=sec%60;timer.textContent=`${m}:${String(s).padStart(2,'0')}`},1000);
-let dragVal='';document.querySelectorAll('.drag').forEach(el=>{el.addEventListener('dragstart',e=>dragVal=el.dataset.val)});document.querySelector('.drop').addEventListener('dragover',e=>e.preventDefault());document.querySelector('.drop').addEventListener('drop',e=>{e.preventDefault();e.target.textContent=dragVal;e.target.dataset.answer=dragVal});
-let mapAns='';document.querySelectorAll('.mapbtn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.mapbtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');mapAns=b.textContent;});
-function checkAnswers(){let score=0;if(document.querySelector('input[name=q1]:checked')?.value==='B')score++;if(q2.value.trim().toLowerCase()==='teacher')score++;if(document.querySelector('.drop').dataset.answer==='C')score++;if(mapAns==='A')score++;document.getElementById('score').textContent='Score: '+score+'/4';}
-</script>
+
 </body>
 </html>
